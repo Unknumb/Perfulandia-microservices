@@ -4,6 +4,7 @@ import com.perfulandia.usuarioservice.model.Usuario;
 import com.perfulandia.usuarioservice.repository.UsuarioRepository;
 import com.perfulandia.usuarioservice.service.UsuarioService;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -13,9 +14,11 @@ import java.util.List;
 public class UsuarioController {
 
     private final UsuarioService service;
+    private final RestTemplate restTemplate;
     //Constructor para poder consumir la interfaz
     public UsuarioController(UsuarioService service){
         this.service=service;
+        this.restTemplate= restTemplate;
     }
 
     @GetMapping
@@ -36,6 +39,12 @@ public class UsuarioController {
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable long id){
         service.eliminar(id);
+    }
+
+    //Nuevo método
+    @GetMapping("/carrito/{id}")
+    public Usuario obtenerUsuario(@PathVariable long id){
+        return restTemplate.getForObject("http://localhost:8083/api/carrito/"+id,Usuario.class);
     }
 
 
