@@ -17,7 +17,7 @@ public class Carrito {
 
     private Double total;
 
-    // Getters y setters
+    // Getters y setterss
     public long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
