@@ -21,4 +21,4 @@ public class Carrito {
     private List<Long> productoIds;
 
     private Double total;
-}
+
