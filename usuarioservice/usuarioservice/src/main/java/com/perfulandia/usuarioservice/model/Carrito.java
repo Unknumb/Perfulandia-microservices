@@ -1,24 +1,24 @@
-package com.perfulandia.carritoservice.model;
+package com.perfulandia.usuarioservice.model;
 
-import jakarta.persistence.*;
+
+import jakarta.persistence.ElementCollection;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import lombok.*;
+
 import java.util.List;
 
-@Entity
+//dto
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class Carrito {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     private long usuarioId;
-
-    @ElementCollection
     private List<Long> productoIds;
-
     private Double total;
+
 }
