@@ -37,7 +37,7 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 
 | Nombre                  | Rol en el proyecto         | Servicio principal trabajado |
 |-------------------------|----------------------------|------------------------------|
-| Alvaro Uribe | (Ej: Backend - Notificaciones)   | notificacionservice            |
+| Alvaro Uribe | (Repositorio - Carrito)   | carritoservice           |
 | Nombre del integrante 2 | (Ej: Backend - Productos)  | productoservice              |
 | Nombre del integrante 3 | (Ej:Repositorio)           | pedidoservice                |
 
