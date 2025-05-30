@@ -72,7 +72,7 @@ GET http://localhost:8081/api/usuarios/carrito/2
 }
 ```
 
-![Consultar Carrito desde Usuario](https://github.com/user-attachments/assets/consultar-carrito-desde-usuarios.png)
+
 
 ---
 
@@ -96,7 +96,7 @@ GET http://localhost:8082/api/productos/usuario/2
 }
 ```
 
-![Consultar Producto desde Usuario](https://github.com/user-attachments/assets/consultar-producto-desde-usuario.png)
+
 
 ---
 
@@ -127,7 +127,7 @@ Content-Type: application/json
 }
 ```
 
-![Agregar Usuario](https://github.com/user-attachments/assets/agregar-usuario.png)
+
 
 ---
 
