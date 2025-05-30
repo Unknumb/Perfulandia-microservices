@@ -118,7 +118,7 @@ Cada microservicio es un proyecto Spring Boot independiente con:
 ### Estrategia de Ramificación
 - **Rama `main`**: Código estable y funcional para producción
 - **Desarrollo por microservicio**: Cada integrante trabajó principalmente en su servicio asignado
-- **Commits directos**: Se realizaron commits directos a main debido al trabajo independiente de cada microservicio
+- **Commits directos**: Se realizaron commits directos desde nuestras propias ramas individuales  debido al trabajo independiente de cada microservicio
 
 ### Flujo de Trabajo
 1. **Asignación de servicios**: Cada integrante se enfocó en desarrollar completamente su microservicio
