@@ -50,9 +50,103 @@ su compatibilidad con Spring Boot, su facilidad de uso en entornos de desarrollo
 
 ## 📮 Endpoints y Pruebas
 
+A continuación se presentan los principales endpoints disponibles por microservicio, junto con ejemplos de pruebas realizadas en Postman:
 
-> 📝 Especificar los principales endpoints disponibles por microservicio (CRUD y llamadas entre servicios).  
-> Incluir capturas o descripciones de pruebas realizadas con Postman (mínimo 3 por micro-servicio).
+### 🛒 CarritoService (Puerto 8081)
+
+#### **GET** `/api/usuarios/carrito/{id}` - Consultar Carrito desde Usuario
+Este endpoint permite consultar el carrito asociado a un usuario específico, mostrando la comunicación entre el servicio de usuarios y el servicio de carrito.
+
+**Ejemplo de solicitud:**
+```
+GET http://localhost:8081/api/usuarios/carrito/2
+```
+
+**Respuesta:**
+```json
+{
+  "id": 2,
+  "usuarioId": 1,
+  "productoIds": [1, 2],
+  "total": 176666.0
+}
+```
+
+![Consultar Carrito desde Usuario](https://github.com/user-attachments/assets/consultar-carrito-desde-usuarios.png)
+
+---
+
+### 📦 ProductService (Puerto 8082)
+
+#### **GET** `/api/productos/usuario/{id}` - Consultar Producto desde Usuario
+Este endpoint demuestra la integración entre microservicios, permitiendo consultar información de productos desde el contexto de un usuario.
+
+**Ejemplo de solicitud:**
+```
+GET http://localhost:8082/api/productos/usuario/2
+```
+
+**Respuesta:**
+```json
+{
+  "id": 2,
+  "nombre": "Ana López",
+  "correo": "ana@perfulandia.com",
+  "rol": "CLIENTE"
+}
+```
+
+![Consultar Producto desde Usuario](https://github.com/user-attachments/assets/consultar-producto-desde-usuario.png)
+
+---
+
+### 👤 UsuarioService (Puerto 8081)
+
+#### **POST** `/api/usuarios` - Agregar Usuario
+Este endpoint permite crear nuevos usuarios en el sistema, validando los datos de entrada y almacenándolos en la base de datos.
+
+**Ejemplo de solicitud:**
+```
+POST http://localhost:8081/api/usuarios
+Content-Type: application/json
+
+{
+  "nombre": "Ana López",
+  "correo": "ana@perfulandia.com",
+  "rol": "CLIENTE"
+}
+```
+
+**Respuesta:**
+```json
+{
+  "id": 2,
+  "nombre": "Ana López",
+  "correo": "ana@perfulandia.com",
+  "rol": "CLIENTE"
+}
+```
+
+![Agregar Usuario](https://github.com/user-attachments/assets/agregar-usuario.png)
+
+---
+
+### 🔍 Características Destacadas de los Endpoints
+
+- **Comunicación entre Microservicios**: Los endpoints demuestran cómo los servicios se comunican entre sí usando RestTemplate
+- **Separación de Responsabilidades**: Cada microservicio maneja su dominio específico (usuarios, productos, carrito)
+- **APIs RESTful**: Siguiendo las mejores prácticas REST para operaciones CRUD
+- **Validación de Datos**: Los endpoints incluyen validación de entrada y manejo de errores
+- **Respuestas JSON**: Formato estándar para intercambio de datos entre servicios y clientes
+
+### ✅ Estados de Respuesta
+- **200 OK**: Operaciones exitosas (GET, PUT)
+- **201 Created**: Recursos creados exitosamente (POST)
+- **400 Bad Request**: Datos de entrada inválidos
+- **404 Not Found**: Recurso no encontrado
+- **500 Internal Server Error**: Errores del servidor
+
+---
 
 ## 🧑‍💻 Integrantes del Equipo
 
