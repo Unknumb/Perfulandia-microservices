@@ -5,7 +5,14 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 
 ## 📦 Descripción General del Proyecto
 
-> 📝 Explicar brevemente en qué consiste el sistema, qué problema resuelve y qué beneficios ofrece al reemplazar el antiguo sistema monolítico.
+> Nuestro sistema es una arquitectura basada en microservicios, compuesta por 4 microservicios independientes que se comunican entre sí para gestionar diferentes funciones de perfulandia, Antes todo estaba en un sistema monolítico donde todas las funcionalidades estaban juntas en una sola aplicación, lo que causaba varios problemas como
+> -lentitud
+> -dificil mantencion
+> entre otros.
+> y tenemos beneficios como:
+> -Escalabilidad
+> -Modularidad
+> -Despliegue rapido
 
 ## 🧩 Arquitectura de Microservicios
 
@@ -13,10 +20,10 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 
 ### Microservicios Desarrollados
 
-- `usuarioservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
-- `productservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
-- `carritoservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
-- `notificacionservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
+- `usuarioservice`: > 📝 Registra los usuarios del sistema.
+- `productservice`: > 📝 Almacena el stock de perfumes de perfulandia.
+- `carritoservice`: > 📝 Registra los productos por comprar.
+- `notificacionservice`: > 📝 Notifica las creacion de un carrito.
 
 ## 🛠️ Tecnologías Utilizadas
 
