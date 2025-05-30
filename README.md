@@ -6,10 +6,12 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 ## 📦 Descripción General del Proyecto
 
 > Nuestro sistema es una arquitectura basada en microservicios, compuesta por 4 microservicios independientes que se comunican entre sí para gestionar diferentes funciones de perfulandia, Antes todo estaba en un sistema monolítico donde todas las funcionalidades estaban juntas en una sola aplicación, lo que causaba varios problemas como
+> 
 > -lentitud
 > -dificil mantencion
 > entre otros.
 > y tenemos beneficios como:
+> 
 > -Escalabilidad
 > -Modularidad
 > -Despliegue rapido
