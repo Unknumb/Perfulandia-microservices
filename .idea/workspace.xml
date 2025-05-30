@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba051824-e7d9-4355-839d-3b78d27b5c9c" name="Changes" comment="">
+    <list default="true" id="ba051824-e7d9-4355-839d-3b78d27b5c9c" name="Changes" comment="&quot;notificaciones finalizado&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificacionservice/notificacionservice/src/main/java/com/perfulandia/notificacionservice/controller/NotificacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificacionservice/notificacionservice/src/main/java/com/perfulandia/notificacionservice/controller/NotificacionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carritoservice/carritoservice/src/main/java/com/perfulandia/carritoservice/controller/CarritoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/carritoservice/carritoservice/src/main/java/com/perfulandia/carritoservice/controller/CarritoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carritoservice/carritoservice/src/main/java/com/perfulandia/carritoservice/model/Notificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/carritoservice/carritoservice/src/main/java/com/perfulandia/carritoservice/model/Notificacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notificacionservice/notificacionservice/src/main/java/com/perfulandia/notificacionservice/model/Notificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificacionservice/notificacionservice/src/main/java/com/perfulandia/notificacionservice/model/Notificacion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,30 +48,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.CarritoserviceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.NotificacionserviceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ProductserviceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UsuarioserviceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alvar/OneDrive/Escritorio/si/Perfulandia-backend&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.CarritoserviceApplication.executor": "Run",
+    "Spring Boot.Carritoserviceapp.executor": "Run",
+    "Spring Boot.NotificacionSeriveapp.executor": "Run",
+    "Spring Boot.NotificacionserviceApplication.executor": "Run",
+    "Spring Boot.Productoserviceapp.executor": "Run",
+    "Spring Boot.ProductserviceApplication.executor": "Run",
+    "Spring Boot.UsuarioserviceApplication.executor": "Run",
+    "Spring Boot.Usuarioservieapp.executor": "Run",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/alvar/OneDrive/Escritorio/si/Perfulandia-backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Usuarioservieapp">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Perfulandia-backend" />
       <method v="2">
@@ -119,6 +137,34 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="Carritoserviceapp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="carritoservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.perfulandia.carritoservice.CarritoserviceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificacionSeriveapp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="notificacionservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.perfulandia.notificacionservice.NotificacionserviceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Productoserviceapp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="productservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.perfulandia.productservice.ProductserviceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Usuarioservieapp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="usuarioservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.perfulandia.usuarioservice.UsuarioserviceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
       <module name="Perfulandia-backend" />
       <option name="ENV_FILES" value="" />
@@ -132,6 +178,12 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.Carritoserviceapp" />
+      <item itemvalue="Spring Boot.NotificacionSeriveapp" />
+      <item itemvalue="Spring Boot.Productoserviceapp" />
+      <item itemvalue="Spring Boot.Usuarioservieapp" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -150,10 +202,24 @@
       <updated>1748218723198</updated>
       <workItem from="1748218725584" duration="64000" />
       <workItem from="1748556347276" duration="223000" />
+      <workItem from="1748617031413" duration="2585000" />
     </task>
+    <task id="LOCAL-00001" summary="&quot;notificaciones finalizado&quot;">
+      <option name="closed" value="true" />
+      <created>1748579608172</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748579608172</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;notificaciones finalizado&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;notificaciones finalizado&quot;" />
   </component>
 </project>

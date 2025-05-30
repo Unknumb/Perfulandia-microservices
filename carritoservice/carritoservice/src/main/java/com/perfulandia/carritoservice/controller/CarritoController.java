@@ -34,8 +34,12 @@ public class CarritoController {
     public Carrito guardar(@RequestBody Carrito carrito) {
         Carrito savedCarrito = carritoService.guardar(carrito);
 
+
         String mensaje = "Se creó tu carrito #" + savedCarrito.getId() + " con total $" + savedCarrito.getTotal();
-        Notificacion notificacion = new Notificacion(savedCarrito.getUsuarioId(), mensaje);
+        Notificacion notificacion = new Notificacion();
+        notificacion.setUsuarioId(savedCarrito.getUsuarioId());
+        notificacion.setCarritoId(savedCarrito.getId()); // <-- Añadir esta línea
+        notificacion.setMensaje(mensaje);
         restTemplate.postForObject("http://localhost:8084/api/notificaciones", notificacion, Notificacion.class);
 
         return savedCarrito;

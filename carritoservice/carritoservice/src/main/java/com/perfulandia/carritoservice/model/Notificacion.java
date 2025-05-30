@@ -10,4 +10,5 @@ import lombok.NoArgsConstructor;
 public class Notificacion {
     private long usuarioId;
     private String mensaje;
+    private long carritoId;
 }
