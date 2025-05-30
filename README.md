@@ -21,7 +21,7 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 
 ## 🧩 Arquitectura de Microservicios
 
-> 📝 Describir cómo está estructurado el sistema en microservicios. Pueden incluir un diagrama y explicar brevemente la función de cada servicio.
+
 
 ### Microservicios Desarrollados
 
