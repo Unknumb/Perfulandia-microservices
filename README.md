@@ -42,9 +42,8 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 | Nombre                  | Rol en el proyecto         | Servicio principal trabajado |
 |-------------------------|----------------------------|------------------------------|
 | Alvaro Uribe | (Repositorio - Carrito)   | carritoservice           |
-| Nombre del integrante 2 | (Ej: Backend - Productos)  | productservice              |
-| Nombre del integrante 3 | (Ej: Backend - Usuarios)   | usuarioservice              |
-| Nombre del integrante 4 | (Ej: Backend - Notificaciones) | notificacionservice     |
+| Juan Toledo | (Carrito - Notificaciones)   | usuarioservice              |
+| Nicolas Hölck | (Notificaciones) | notificacionservice     |
 
 ## 📂 Estructura del Repositorio
 
