@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ba051824-e7d9-4355-839d-3b78d27b5c9c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificacionservice/notificacionservice/src/main/java/com/perfulandia/notificacionservice/NotificacionserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificacionservice/notificacionservice/src/main/java/com/perfulandia/notificacionservice/NotificacionserviceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notificacionservice/notificacionservice/src/main/java/com/perfulandia/notificacionservice/controller/NotificacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificacionservice/notificacionservice/src/main/java/com/perfulandia/notificacionservice/controller/NotificacionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificacionservice/notificacionservice/src/main/java/com/perfulandia/notificacionservice/model/Notificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificacionservice/notificacionservice/src/main/java/com/perfulandia/notificacionservice/model/Notificacion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +71,17 @@
   }
 }</component>
   <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Perfulandia-backend" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Perfulandia-backend" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Perfulandia-backend" />
       <option name="ENV_FILES" value="" />
@@ -119,17 +130,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Perfulandia-backend" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Perfulandia-backend" />
-      <option name="filePath" />
       <method v="2" />
     </configuration>
   </component>
