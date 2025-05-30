@@ -115,11 +115,41 @@ Cada microservicio es un proyecto Spring Boot independiente con:
 
 ## 👥 Colaboración en GitHub
 
-> 📝 Explicar cómo se organizó el trabajo en ramas (`master`, `pruebas`), frecuencia de commits y cómo se coordinaron como equipo.
+### Estrategia de Ramificación
+- **Rama `main`**: Código estable y funcional para producción
+- **Desarrollo por microservicio**: Cada integrante trabajó principalmente en su servicio asignado
+- **Commits directos**: Se realizaron commits directos a main debido al trabajo independiente de cada microservicio
+
+### Flujo de Trabajo
+1. **Asignación de servicios**: Cada integrante se enfocó en desarrollar completamente su microservicio
+2. **Desarrollo paralelo**: Trabajo simultáneo en diferentes servicios sin conflictos
+3. **Commits regulares**: Actualización frecuente del progreso con mensajes descriptivos
+4. **Coordinación**: Comunicación constante para asegurar compatibilidad entre servicios
+
+### Organización del Equipo
+- **Distribución clara**: Cada desarrollador responsable de un microservicio específico
+- **Comunicación externa**: Coordinación a través de WhatsApp y reuniones presenciales
+- **Sincronización**: Verificación de cambios antes de hacer push para evitar conflictos
 
 ## 📈 Lecciones Aprendidas
 
-> 📝 Reflexionar brevemente sobre qué aprendieron durante el desarrollo del proyecto (técnico y en trabajo en equipo).
+### Técnicas
+- **Configuración de puertos**: Aprendimos la importancia de configurar puertos diferentes para cada microservicio (8080, 8081, 8082, 8083)
+- **Gestión de dependencias**: Maven facilitó mantener las dependencias organizadas en cada proyecto independiente
+- **Bases de datos separadas**: Cada microservicio necesita su propia configuración de BD para mantener la independencia
+- **Testing con Postman**: La documentación y prueba sistemática de endpoints es fundamental para validar la funcionalidad
+
+### Trabajo en Equipo
+- **Comunicación constante**: Los microservicios requieren coordinación entre desarrolladores para las integraciones
+- **Definición de APIs**: Acordar las interfaces entre servicios desde el inicio evita problemas posteriores
+- **Trabajo paralelo**: GitHub permite que cada desarrollador trabaje en su servicio sin interferir con otros
+- **Resolución de conflictos**: La comunicación previa antes de commits ayuda a evitar conflictos de merge
+
+### Arquitectura de Microservicios
+- **Independencia real**: Cada servicio puede desarrollarse, probarse y desplegarse por separado
+- **Escalabilidad**: La arquitectura permite modificar un servicio sin afectar los demás
+- **Mantenibilidad**: Es más fácil localizar y corregir errores cuando cada servicio tiene su responsabilidad específica
+- **Comunicación entre servicios**: Aprendimos a implementar llamadas REST entre microservicios usando RestTemplate
 
 ---
 
