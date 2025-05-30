@@ -42,7 +42,13 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 
 > 📝 Indicar qué motor de base de datos usaron, cómo configuraron la conexión (`application.properties`), y qué tablas y campos definieron para cada microservicio.
 
-En el desarrollo del sistema, cada microservicio fue diseñado para trabajar con su propia base de datos independiente, siguiendo la arquitectura de microservicios para asegurar la separación de responsabilidades y el aislamiento de datos.
+En el desarrollo del sistema, cada microservicio fue diseñado para trabajar con su propia base de datos independiente, siguiendo la arquitectura de microservicios para asegurar la separación de responsabilidades y el aislamiento de datoss.
+
+> 1️⃣ Motor de Base de Datos
+Se utilizó MySQL como motor de base de datos para todos los microservicios.
+La elección se basó en:
+su compatibilidad con Spring Boot, su facilidad de uso en entornos de desarrollo locales, y su robustez y soporte para operaciones transaccionales.
+
 
 ## 📮 Endpoints y Pruebas
 
