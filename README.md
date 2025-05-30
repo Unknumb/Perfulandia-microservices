@@ -5,18 +5,30 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 
 ## 📦 Descripción General del Proyecto
 
-> 📝 Explicar brevemente en qué consiste el sistema, qué problema resuelve y qué beneficios ofrece al reemplazar el antiguo sistema monolítico.
+> Nuestro sistema es una arquitectura basada en microservicios, compuesta por 4 microservicios independientes que se comunican entre sí para gestionar diferentes funciones de perfulandia, Antes todo estaba en un sistema monolítico donde todas las funcionalidades estaban juntas en una sola aplicación, lo que causaba varios problemas como
+> 
+> -lentitud
+> 
+> -dificil mantencion
+> 
+> y tenemos beneficios como:
+> 
+> -Escalabilidad
+>
+> -Modularidad
+>
+> -Despliegue rapido
 
 ## 🧩 Arquitectura de Microservicios
 
-> 📝 Describir cómo está estructurado el sistema en microservicios. Pueden incluir un diagrama y explicar brevemente la función de cada servicio.
+
 
 ### Microservicios Desarrollados
 
-- `usuarioservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
-- `productservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
-- `carritoservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
-- `notificacionservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
+- `usuarioservice`: > 📝 Registra los usuarios del sistema.
+- `productservice`: > 📝 Almacena el stock de perfumes de perfulandia.
+- `carritoservice`: > 📝 Registra los productos por comprar.
+- `notificacionservice`: > 📝 Notifica las creacion de un carrito.
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -30,6 +42,14 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 
 > 📝 Indicar qué motor de base de datos usaron, cómo configuraron la conexión (`application.properties`), y qué tablas y campos definieron para cada microservicio.
 
+En el desarrollo del sistema, cada microservicio fue diseñado para trabajar con su propia base de datos independiente, siguiendo la arquitectura de microservicios para asegurar la separación de responsabilidades y el aislamiento de datoss.
+
+> 1️⃣ Motor de Base de Datos
+Se utilizó MySQL como motor de base de datos para todos los microservicios.
+La elección se basó en:
+su compatibilidad con Spring Boot, su facilidad de uso en entornos de desarrollo locales, y su robustez y soporte para operaciones transaccionales.
+
+
 ## 📮 Endpoints y Pruebas
 
 > 📝 Especificar los principales endpoints disponibles por microservicio (CRUD y llamadas entre servicios).  
@@ -42,9 +62,8 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 | Nombre                  | Rol en el proyecto         | Servicio principal trabajado |
 |-------------------------|----------------------------|------------------------------|
 | Alvaro Uribe | (Repositorio - Carrito)   | carritoservice           |
-| Nombre del integrante 2 | (Ej: Backend - Productos)  | productservice              |
-| Nombre del integrante 3 | (Ej: Backend - Usuarios)   | usuarioservice              |
-| Nombre del integrante 4 | (Ej: Backend - Notificaciones) | notificacionservice     |
+| Juan Toledo | (Carrito - Notificaciones)   | usuarioservice              |
+| Nicolas Hölck | (Notificaciones) | notificacionservice     |
 
 ## 📂 Estructura del Repositorio
 
