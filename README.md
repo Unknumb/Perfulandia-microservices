@@ -14,13 +14,17 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 ### Microservicios Desarrollados
 
 - `usuarioservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
-- `productoservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
-- `________service`: > 📝 Indicar el nombre y función del microservicio adicional implementado.
-- `________service`: > 📝 Indicar el nombre y función del microservicio adicional implementado.
+- `productservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
+- `carritoservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
+- `notificacionservice`: > 📝 Describir qué funcionalidades ofrece este microservicio.
 
 ## 🛠️ Tecnologías Utilizadas
 
-> 📝 Listar las tecnologías y herramientas utilizadas en el proyecto (Spring Boot, Maven, MySQL, Postman, GitHub, etc.).
+- **Spring Boot**: Framework principal para el desarrollo de los microservicios
+- **Maven**: Herramienta de gestión de dependencias y construcción de proyectos
+- **MySQL**: Sistema de gestión de bases de datos relacionales
+- **Postman**: Herramienta para pruebas y documentación de APIs
+- **GitHub**: Plataforma de control de versiones y colaboración en el código
 
 ## 🗄️ Configuración de Bases de Datos
 
@@ -38,23 +42,57 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 | Nombre                  | Rol en el proyecto         | Servicio principal trabajado |
 |-------------------------|----------------------------|------------------------------|
 | Alvaro Uribe | (Repositorio - Carrito)   | carritoservice           |
-| Nombre del integrante 2 | (Ej: Backend - Productos)  | productoservice              |
-| Nombre del integrante 3 | (Ej:Repositorio)           | pedidoservice                |
+| Nombre del integrante 2 | (Ej: Backend - Productos)  | productservice              |
+| Nombre del integrante 3 | (Ej: Backend - Usuarios)   | usuarioservice              |
+| Nombre del integrante 4 | (Ej: Backend - Notificaciones) | notificacionservice     |
 
 ## 📂 Estructura del Repositorio
 
-> 📝 Explicar brevemente la organización de carpetas del repositorio (por ejemplo, cada carpeta corresponde a un microservicio separado con su propio `pom.xml`).
+El repositorio está organizado con cada microservicio en su propia carpeta independiente, cada uno con su configuración y dependencias específicas:
 
 ```
-
-📦 perfulandia-microservices
-├── usuarioservice
-├── productoservice
-├── pedidoservice (Ejemplo)
-├── notificacionservice (Ejemplo)
+📦 Perfulandia-microservices/
+├── 🛒 carritoservice/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   └── resources/
+│   │   └── test/
+│   ├── pom.xml
+│   └── README.md
+├── 🔔 notificacionservice/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   └── resources/
+│   │   └── test/
+│   ├── pom.xml
+│   └── README.md
+├── 📦 productservice/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   └── resources/
+│   │   └── test/
+│   ├── pom.xml
+│   └── README.md
+├── 👤 usuarioservice/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   └── resources/
+│   │   └── test/
+│   ├── pom.xml
+│   └── README.md
+├── LICENSE
 └── README.md
-
 ```
+
+Cada microservicio es un proyecto Spring Boot independiente con:
+- **Estructura Maven estándar**: Organización de código fuente, recursos y pruebas
+- **Configuración independiente**: Cada servicio tiene su propio `application.properties`
+- **Base de datos específica**: Cada microservicio gestiona su propio esquema de datos
+- **APIs REST**: Endpoints específicos para las funcionalidades de cada dominio
 
 ## 👥 Colaboración en GitHub
 
@@ -67,4 +105,3 @@ Este repositorio contiene el desarrollo técnico del sistema basado en microserv
 ---
 
 [Guía Oficial en Notion – Evaluación Parcial 2 (35%)](https://quilt-canary-969.notion.site/Gu-a-Oficial-Evaluaci-n-Parcial-2-35-1f75b3c4e31280aaab79c9a71f1cfb7b?pvs=4)
-
