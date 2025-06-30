@@ -1,61 +1,79 @@
 package com.perfulandia.productservice.controller;
-import com.perfulandia.productservice.model.Usuario;
-import com.perfulandia.productservice.model.Producto;
+
+import com.perfulandia.productservice.assembler.ProductoModelAssembler;
 import com.perfulandia.productservice.model.Carrito;
+import com.perfulandia.productservice.model.Producto;
+import com.perfulandia.productservice.model.Usuario;
 import com.perfulandia.productservice.service.ProductoService;
+
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.CollectionModel;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.List;
-
-//Nuevas importaciones DTO conexión al MS usuario
 import org.springframework.web.client.RestTemplate;
-//Para hacer peticiones HTTP a otros microservicios.
 
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/productos")
 public class ProductoController {
 
-
-
     private final ProductoService servicio;
     private final RestTemplate restTemplate;
-    //final: oye esto no lo toques
-    public ProductoController(ProductoService servicio,  RestTemplate restTemplate){
+    private final ProductoModelAssembler assembler;
+
+    public ProductoController(ProductoService servicio, RestTemplate restTemplate, ProductoModelAssembler assembler) {
         this.servicio = servicio;
         this.restTemplate = restTemplate;
+        this.assembler = assembler;
     }
 
-    //listar
+    // Listar con HATEOAS
     @GetMapping
-    public List<Producto> listar(){
-        return servicio.listar();
+    public CollectionModel<EntityModel<Producto>> listar() {
+        List<EntityModel<Producto>> productos = servicio.listar().stream()
+            .map(assembler::toModel)
+            .collect(Collectors.toList());
+
+        return CollectionModel.of(productos,
+            linkTo(methodOn(ProductoController.class).listar()).withSelfRel());
     }
-    //guardar
+
+    // Guardar producto
     @PostMapping
-    public Producto guardar(@RequestBody Producto producto){
+    public Producto guardar(@RequestBody Producto producto) {
         return servicio.guardar(producto);
     }
-    //buscar x id
+
+    // Buscar por ID con HATEOAS
     @GetMapping("/{id}")
-    public Producto buscar(@PathVariable long id){
-        return servicio.bucarPorId(id);
+    public EntityModel<Producto> buscar(@PathVariable long id) {
+        Producto producto = servicio.bucarPorId(id);
+        if (producto == null) {
+            throw new RuntimeException("Producto no encontrado");
+        }
+        return assembler.toModel(producto);
     }
-    //Eliminar
+
+    // Eliminar
     @DeleteMapping("/{id}")
-    public void eliminar(@PathVariable long id){
+    public ResponseEntity<?> eliminar(@PathVariable long id) {
         servicio.eliminar(id);
+        return ResponseEntity.noContent().build();
     }
 
-    //Nuevo método
+    // Obtener usuario de otro MS
     @GetMapping("/usuario/{id}")
-    public Usuario obtenerUsuario(@PathVariable long id){
-        return restTemplate.getForObject("http://localhost:8081/api/usuarios/"+id,Usuario.class);
+    public Usuario obtenerUsuario(@PathVariable long id) {
+        return restTemplate.getForObject("http://localhost:8081/api/usuarios/" + id, Usuario.class);
     }
-    //Nuevo método
+
+    // Obtener carrito de otro MS
     @GetMapping("/carrito/{id}")
-    public Carrito obtenerCarrito(@PathVariable long id){
-        return restTemplate.getForObject("http://localhost:8083/api/carritos/"+id, Carrito.class);
+    public Carrito obtenerCarrito(@PathVariable long id) {
+        return restTemplate.getForObject("http://localhost:8083/api/carritos/" + id, Carrito.class);
     }
-
-
 }
