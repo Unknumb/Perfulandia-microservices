@@ -4,10 +4,15 @@ import com.perfulandia.carritoservice.model.Carrito;
 import com.perfulandia.carritoservice.model.Notificacion;
 import com.perfulandia.carritoservice.service.CarritoService;
 import org.springframework.web.bind.annotation.*;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
+@Tag(name="Carrito", description = "Operaciones de tipo CRUD para El carrito")
 @RestController
 @RequestMapping("/api/carritos")
 public class CarritoController {
@@ -20,16 +25,32 @@ public class CarritoController {
         this.restTemplate = restTemplate;
     }
 
+
+    //Operation: para documentar endpoints espeificos o metodos
+    @Operation(summary = "Obtener todos los carritos los usuarios", description = "Devuelve una lista con todos " +
+            "los carritos")
+    @ApiResponse(responseCode = "200", description = "Consulta exitosa")//Sirve para documentar las respuestas esperadas
     @GetMapping
     public List<Carrito> obtenerTodos() {
         return carritoService.obtenerTodos();
     }
 
+
+    @Operation(summary = "obtiene un carrito de un usuario en especifico")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Carrito de usuario encontrado exitosamente"),
+            @ApiResponse(responseCode = "404", description = "Carrito no encontrada")
+    })
     @GetMapping("/{id}")
     public Carrito obtenerPorId(@PathVariable Long id) {
         return carritoService.obtenerPorId(id);
     }
 
+    @Operation(summary = "Guarda un carrito")
+    @ApiResponses({
+            @ApiResponse(responseCode = "201", description = "Carrito guardado"),
+            @ApiResponse(responseCode = "404", description = "Error de validación")
+    })
     @PostMapping
     public Carrito guardar(@RequestBody Carrito carrito) {
         Carrito savedCarrito = carritoService.guardar(carrito);
@@ -45,6 +66,11 @@ public class CarritoController {
         return savedCarrito;
     }
 
+    @Operation(summary = "Elimina un carrito")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Carrito eliminado correctamente"),
+            @ApiResponse(responseCode = "400", description = "Error de validación")
+    })
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
         carritoService.eliminar(id);

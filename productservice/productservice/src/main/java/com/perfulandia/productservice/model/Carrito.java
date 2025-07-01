@@ -1,5 +1,6 @@
 package com.perfulandia.productservice.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.ElementCollection;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,6 +11,7 @@ import lombok.*;
 import java.util.List;
 
 //dto
+@Schema(description = "Entidad que representa un carrito desde el producto")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
