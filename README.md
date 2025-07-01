@@ -42,6 +42,9 @@ Nuestro sistema es una arquitectura basada en microservicios, compuesta por 4 mi
 
 En el desarrollo del sistema, cada microservicio fue diseñado para trabajar con su propia base de datos independiente, siguiendo la arquitectura de microservicios para asegurar la separación de responsabilidades y el aislamiento de datoss.
 
+## Uso de forma local
+Despues de la configuracion y creacion de la base de datos local, ejecutar el proyecto y usar este link de referancia para ingresar a pagina de swagger:  http://localhost:8080/swagger-ui.html
+
 ## 1️⃣ Motor de Base de Datos
 Se utilizó MySQL como motor de base de datos para todos los microservicios.
 La elección se basó en:
